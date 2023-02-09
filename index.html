@@ -11,26 +11,27 @@
 <header>
     <h1 align="center">Sorting Visualizer</h1>
     <nav>
-        <div class="row  d-flex flex-column">
-            <div class="col-sm-8 id="newArray">
+        <div class="row">
+            <div class="col gap-2 d-sm-flex" id="newArray">
                 <button type="button" class="btn btn-outline-success btn-dark newArray">New Array</button>
             </div>
-            <!-- <div class="col" id="input">
-                <span id="speed">Speed
-                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
-                </span> -->
+            <div class="col" id="input">
+                 <span 
+                 id="speed">
+                    <!-- <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>  -->
+                </span>
             </div>
-            <div class="col  d-flex flex-colm">
-                <!-- <button type="button" class=" btn btn-outline-success btn-dark newArray">New Array</button> -->
-                <button type="button" class="btn btn-outline-primary">Bubble Sort</button>
-                <button type="button" class="btn btn-outline-primary">Selection Sort</button>
-                <button type="button" class="btn btn-outline-primary">Insertion Sort</button>
-                <button type="button" class="btn btn-outline-primary">Quick Sort</button>
-                <button type="button" class="btn btn-outline-primary">Merge Sort</button>
+            <div class="col gap-1 sm-4 d-sm-flex">
+                <button type="button" class="btn btn-outline-primary bubbleSort">Bubble Sort</button>
+                <button type="button" class="btn btn-outline-primary selectionSort">Selection Sort</button>
+                <button type="button" class="btn btn-outline-primary insertionSort">Insertion Sort</button>
+                <button type="button" class="btn btn-outline-primary quickSort">Quick Sort</button>
+                <button type="button" class="btn btn-outline-primary mergeSort">Merge Sort</button>
             </div>
-            
         </div>
     </nav>
+    
+   
 </header>
 <body class="p-3 mb-2 bg-dark text-white">
     
@@ -43,5 +44,6 @@
     <script src="js_files/merge.js"></script>
     <script src="js_files/quick.js"></script>
     <script src="js_files/selection.js"></script>
+    <script src="./js_files/newarray.js"></script>
 </body>
 </html>
