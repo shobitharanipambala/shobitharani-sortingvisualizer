@@ -14,7 +14,7 @@ const createBars = () => {
     for (let i = 0; i < array.length; i++) {
         const bar = document.createElement("div");
         bar.classList.add("bar");
-        bar.style.height = `${array[i]}px`;
+        bar.style.height = `${array[i]}3px`;
         bars.appendChild(bar);
     }
 };
