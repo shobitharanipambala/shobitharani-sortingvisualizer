@@ -56,8 +56,10 @@ function waitforme(milisec) {
 /**
  * your task is to add event listener to the size slider and create new array using createNewArray(size) function
  */
+
 // Selecting size slider from DOM
 let arraySize = document.querySelector('#arr_sz');
+
 // add Event listener to update the bars on the UI
 
 
@@ -89,15 +91,27 @@ function createNewArray(noOfBars = 60) {
 
     // create an array of random numbers 
     array = [];
+    for(let i=0;i<noOfBars;i++){
+        array.push(Math.floor(Math.random() * 100));
+    }
     // select the div #bars element
     const bars = document.querySelector("#bars");
 
     // create multiple element div using loop and adding class 'bar col'
     for (let i = 0; i < noOfBars; i++) {
         //create element
+        const bar = document.createElement("div");
+        // add random number to the array
+        array[i] = Math.floor(Math.random() * 100);
+        // add element to the DOM by appending to the div #bars
         // update height of bar
+        bar.style.height = `${array[i]*4}px`;
+        bar.classList.add('bar');
+        // bar.classList.add('flex-item');
+        // bar.classList.add(`barNo${i}`);
         // add appropriate styling class to the element
         // add element to the DOM by appending to the div #bars
+        bars.appendChild(bar);
     }
 }
 
@@ -106,13 +120,3 @@ function deleteChild() {
     const bar = document.querySelector("#bars");
     bar.innerHTML = '';
 }
-
-// Selecting newarray button from DOM and adding eventlistener
-const newArray = document.querySelector(".newArray");
-newArray.addEventListener("click", function(){
-    console.log("From newArray " + arraySize.value);
-    console.log("From newArray " + delay);
-    enableSortingBtn();
-    enableSizeSlider();
-    createNewArray(arraySize.value);
-});
