@@ -120,3 +120,13 @@ function deleteChild() {
     const bar = document.querySelector("#bars");
     bar.innerHTML = '';
 }
+
+// Selecting newarray button from DOM and adding eventlistener
+const newArray = document.querySelector(".newArray");
+newArray.addEventListener("click",()=>{
+    console.log("From newArray " + arraySize.value);
+    console.log("From newArray " + delay);
+    enableSortingBtn();
+    enableSizeSlider();
+    createNewArray(arraySize.value);
+});
