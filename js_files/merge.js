@@ -14,7 +14,7 @@ async function merge(ele, low, mid, high){
         console.log('In merge left loop');
         console.log(ele[low + i].style.height + ' at ' + (low+i));
         // color
-        ele[low + i].style.background = 'orange';
+        ele[low + i].style.background = 'red';
         left[i] = ele[low + i].style.height;
     }
     for(let i = 0; i < n2; i++){
@@ -41,7 +41,7 @@ async function merge(ele, low, mid, high){
                 ele[k].style.background = 'green';
             }
             else{
-                ele[k].style.background = 'lightgreen';
+                ele[k].style.background = 'green';
             }
             
             ele[k].style.height = left[i];

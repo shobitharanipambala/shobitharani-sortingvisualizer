@@ -1,7 +1,6 @@
 async function bubble() {
     console.log('In bubbe()');
     const ele = document.querySelectorAll(".bar");
-    //write your code here
     for(let i = 0; i < ele.length-1; i++){
         console.log('In ith loop');
         for(let j = 0; j < ele.length-i-1; j++){
